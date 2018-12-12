@@ -7,6 +7,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 colorscheme apprentice
@@ -25,4 +26,5 @@ autocmd Filetype python setlocal ts=2 sw=2 expandtab
 cnoreabbrev nt NERDTreeToggle
 :nnoremap <leader>w <c-w>
 :nnoremap <leader>t :NERDTreeToggle<cr>
+:nnoremap <leader>g :Goyo<cr>
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>

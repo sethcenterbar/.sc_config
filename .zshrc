@@ -51,43 +51,43 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # fzf zsh autocompletion
 
 
-# vi mode
-bindkey -v
-export KEYTIMEOUT=1
+# # vi mode
+# bindkey -v
+# export KEYTIMEOUT=1
 
-bindkey '^P' up-history
-bindkey '^N' down-history
-bindkey '^r' history-incremental-search-backward
+# bindkey '^P' up-history
+# bindkey '^N' down-history
+# bindkey '^r' history-incremental-search-backward
 
-zle -N zle-line-init
-zle -N zle-keymap-select
+# zle -N zle-line-init
+# zle -N zle-keymap-select
 
-# Beginning search with arrow keys
-bindkey "^[OA" up-line-or-beginning-search
-bindkey "^[OB" down-line-or-beginning-search
-bindkey -M vicmd "k" up-line-or-beginning-search
-bindkey -M vicmd "j" down-line-or-beginning-search
+# # Beginning search with arrow keys
+# bindkey "^[OA" up-line-or-beginning-search
+# bindkey "^[OB" down-line-or-beginning-search
+# bindkey -M vicmd "k" up-line-or-beginning-search
+# bindkey -M vicmd "j" down-line-or-beginning-search
 
-function zle-keymap-select zle-line-init
-{
-    # change cursor shape in iTerm2
-    case $KEYMAP in
-        vicmd)      print -n -- "\E]50;CursorShape=0\C-G";;  # block cursor
-        viins|main) print -n -- "\E]50;CursorShape=1\C-G";;  # line cursor
-    esac
+# function zle-keymap-select zle-line-init
+# {
+#     # change cursor shape in iTerm2
+#     case $KEYMAP in
+#         vicmd)      print -n -- "\E]50;CursorShape=0\C-G";;  # block cursor
+#         viins|main) print -n -- "\E]50;CursorShape=1\C-G";;  # line cursor
+#     esac
 
-    zle reset-prompt
-    zle -R
-}
+#     zle reset-prompt
+#     zle -R
+# }
 
-function zle-line-finish
-{
-    print -n -- "\E]50;CursorShape=0\C-G"  # block cursor
-}
+# function zle-line-finish
+# {
+#     print -n -- "\E]50;CursorShape=0\C-G"  # block cursor
+# }
 
-zle -N zle-line-init
-zle -N zle-line-finish
-zle -N zle-keymap-select
+# zle -N zle-line-init
+# zle -N zle-line-finish
+# zle -N zle-keymap-select
 
 # Custom Aliases
 alias lo='locate'
@@ -114,5 +114,5 @@ alias svim='sudo vim -u ~/.vimrc'
 alias sc='systemctl'
 alias ssc='sudo systemctl'
 alias rhelpy='scl enable rh-python36 $(which zsh)'
-
-
+alias ec2='ssh -i "~/.ssh/EssentialsKP.pem" ec2-user@ec2-34-206-3-50.compute-1.amazonaws.com'
+alias rhyme="python3 ~/scripts/rhyme.py"
