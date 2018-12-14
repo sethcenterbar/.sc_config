@@ -9,7 +9,10 @@ export ZSHRC_PYTHON_PATH=$(which python3)
 ZSH_THEME="dst"
 
 plugins=(
-  git last-working-dir colored-man-pages 
+  git 
+	last-working-dir 
+	colored-man-pages 
+	zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh

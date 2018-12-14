@@ -18,6 +18,14 @@ else
 	echo -e "${GREEN}Oh-My-ZSH already installed${NC}"
 fi
 
+if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
+	echo -e "${YELLOW}Downloading Oh-My-Zsh autosuggestions plugin !${NC}"
+	sh -c "$(git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions)"
+else
+	echo -e "${GREEN}Oh-My-ZSH autosuggestions plugin already installed${NC}"
+fi
+
+
 if [ ! -d ~/.fzf ]; then
 	echo -e "${YELLOW}Downloading junegunn/fzf${NC}"
 	sh -c "$(git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf)"
