@@ -12,6 +12,7 @@ Plug 'saltstack/salt-vim'
 Plug 'hhsnopek/vim-firewatch'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'lepture/vim-jinja'
 call plug#end()
 
 colorscheme firewatch
