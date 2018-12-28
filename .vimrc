@@ -4,25 +4,29 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'mbbill/undotree'
 Plug 'PProvost/vim-ps1'
 Plug 'ConradIrwin/vim-bracketed-paste'
-"Plug 'davidhalter/jedi-vim'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/goyo.vim'
 Plug 'saltstack/salt-vim'
+Plug 'hhsnopek/vim-firewatch'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-"colorscheme apprentice
+colorscheme firewatch
 
-" by default, the indent is 2 spaces.
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set number
+" airline 
+let g:lightline = {
+  \ 'colorscheme': 'bubblegum',
+  \ }
+let g:airline_theme='bubblegum'
+let g:airline_powerline_fonts = 1
 
 " for html/rb files, 2 spaces
 autocmd Filetype python3 setlocal ts=2 sw=2 expandtab
 autocmd Filetype python setlocal ts=2 sw=2 expandtab
+
 " salt-vim
 syntax on
 set nocompatible
