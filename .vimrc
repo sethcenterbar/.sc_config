@@ -61,4 +61,5 @@ cnoreabbrev nt NERDTreeToggle
 :nnoremap <leader>t :NERDTreeToggle<cr>
 :nnoremap <leader>g :Goyo<cr>
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+au filetype sls Goyo
 
