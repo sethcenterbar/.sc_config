@@ -119,3 +119,4 @@ alias ssc='sudo systemctl'
 alias rhelpy='scl enable rh-python36 $(which zsh)'
 alias ec2='ssh -i "~/.ssh/EssentialsKP.pem" ec2-user@ec2-34-206-3-50.compute-1.amazonaws.com'
 alias rhyme="python3 ~/scripts/rhyme.py"
+alias vg="vim -c 'Goyo' "
