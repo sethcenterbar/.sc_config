@@ -4,13 +4,15 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'mbbill/undotree'
 Plug 'PProvost/vim-ps1'
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/goyo.vim'
+Plug 'saltstack/salt-vim'
 call plug#end()
 
-colorscheme apprentice
+"colorscheme apprentice
 
 " by default, the indent is 2 spaces.
 set shiftwidth=2
@@ -21,6 +23,10 @@ set number
 " for html/rb files, 2 spaces
 autocmd Filetype python3 setlocal ts=2 sw=2 expandtab
 autocmd Filetype python setlocal ts=2 sw=2 expandtab
+" salt-vim
+syntax on
+set nocompatible
+filetype plugin indent on
 
 " Custom mapping
 cnoreabbrev nt NERDTreeToggle
