@@ -6,6 +6,9 @@ cd ~
 export ZSH=~/.oh-my-zsh
 export ZSHRC_PYTHON_PATH=$(which python3)
 
+# Auto update zsh
+DISABLE_UPDATE_PROMPT=true
+
 ZSH_THEME="dst"
 
 plugins=(
