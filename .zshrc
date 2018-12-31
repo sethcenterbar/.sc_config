@@ -9,7 +9,7 @@ export ZSHRC_PYTHON_PATH=$(which python3)
 # Auto update zsh
 DISABLE_UPDATE_PROMPT=true
 
-ZSH_THEME="dst"
+ZSH_THEME="dstcustom"
 
 plugins=(
   git 
@@ -55,45 +55,6 @@ if [ -f ~/.fzfrc ]; then # Import my fzf cmds if present
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # fzf zsh autocompletion
-
-
-# # vi mode
-# bindkey -v
-# export KEYTIMEOUT=1
-
-# bindkey '^P' up-history
-# bindkey '^N' down-history
-# bindkey '^r' history-incremental-search-backward
-
-# zle -N zle-line-init
-# zle -N zle-keymap-select
-
-# # Beginning search with arrow keys
-# bindkey "^[OA" up-line-or-beginning-search
-# bindkey "^[OB" down-line-or-beginning-search
-# bindkey -M vicmd "k" up-line-or-beginning-search
-# bindkey -M vicmd "j" down-line-or-beginning-search
-
-# function zle-keymap-select zle-line-init
-# {
-#     # change cursor shape in iTerm2
-#     case $KEYMAP in
-#         vicmd)      print -n -- "\E]50;CursorShape=0\C-G";;  # block cursor
-#         viins|main) print -n -- "\E]50;CursorShape=1\C-G";;  # line cursor
-#     esac
-
-#     zle reset-prompt
-#     zle -R
-# }
-
-# function zle-line-finish
-# {
-#     print -n -- "\E]50;CursorShape=0\C-G"  # block cursor
-# }
-
-# zle -N zle-line-init
-# zle -N zle-line-finish
-# zle -N zle-keymap-select
 
 # Custom Aliases
 alias lo='locate'

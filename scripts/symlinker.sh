@@ -44,6 +44,12 @@ else
 	echo -e "${GREEN}vim-plug files already installed${NC}"
 fi
 
+# Symlink Custom theme into .oh-my-zsh/
+if [ ! -L ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme ]; then
+	ln -sf ${HOME}/.sc_config/themes/dstcustom.zsh-theme ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme
+fi
+
+
 # Create/Symlink all files in ${HOME} 
 declare -a arr=(".zshrc"
 								".vimrc"
