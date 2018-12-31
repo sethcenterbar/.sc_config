@@ -45,9 +45,21 @@ else
 fi
 
 # Symlink Custom theme into .oh-my-zsh/
-if [ ! -L ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme ]; then
+if [ ! -e ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme ]; then
+	echo -e "${YELLOW}creating dstcustom.zsh-theme"
 	ln -s ${HOME}/.sc_config/themes/dstcustom.zsh-theme ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme
+else
+	echo -e "${GREEN} dstcustom.zsh-theme exists in .oh-my-zsh/themes {$NC}"
+	if [ ! -L ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme ]; then
+		echo -e "${YELLOW} dstcustom.zsh-theme isn't a simlink, fixing.."
+		rm ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme
+		ln -s ${HOME}/.sc_config/themes/dstcustom.zsh-theme ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme
+	else
+		echo -e "${GREEN} dstcustom.zsh-theme is a simlink!{$NC}"
+	fi
 fi
+
+		
 
 
 # Create/Symlink all files in ${HOME} 
