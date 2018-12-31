@@ -10,7 +10,7 @@ function prompt_char {
 
 PROMPT='%(?, ,%{$fg[red]%}Failed with return code $?%{$reset_color%}
 )
-%{$fg[red]%}%n%{$reset_color%} @ %{$fg[yellow]%}%m%{$reset_color%}: %{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt_info)
+%{$fg[red]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%}: %{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt_info)
 $(prompt_char) '
 
 RPROMPT='%{$fg[green]%}[%*]%{$reset_color%}'
