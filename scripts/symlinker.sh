@@ -46,7 +46,7 @@ fi
 
 # Symlink Custom theme into .oh-my-zsh/
 if [ ! -L ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme ]; then
-	ln -sf ${HOME}/.sc_config/themes/dstcustom.zsh-theme ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme
+	ln -s ${HOME}/.sc_config/themes/dstcustom.zsh-theme ${HOME}/.oh-my-zsh/themes/dstcustom.zsh-theme
 fi
 
 
