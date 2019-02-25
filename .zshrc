@@ -9,6 +9,9 @@ export ZSHRC_PYTHON_PATH=$(which python3)
 # Auto update zsh
 DISABLE_UPDATE_PROMPT=true
 
+# 
+export REPORTTIME=1
+
 ZSH_THEME="dstcustom"
 
 plugins=(
@@ -84,3 +87,13 @@ alias rhelpy='scl enable rh-python36 $(which zsh)'
 alias ec2='ssh -i "~/.ssh/EssentialsKP.pem" ec2-user@ec2-34-206-3-50.compute-1.amazonaws.com'
 alias rhyme="python3 ~/scripts/rhyme.py"
 alias vg="vim -c 'Goyo' "
+alias lyn="learnyounode"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sethcenterbar/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sethcenterbar/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sethcenterbar/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sethcenterbar/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/sethcenterbar/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
