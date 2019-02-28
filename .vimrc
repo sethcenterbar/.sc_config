@@ -4,7 +4,6 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'mbbill/undotree'
 Plug 'PProvost/vim-ps1'
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/goyo.vim'
