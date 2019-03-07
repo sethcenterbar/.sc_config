@@ -45,6 +45,10 @@ function lazypull() {
 	git pull	
 }
 
+if [ -f /Users/sethcenterbar/Library/Python/3.7/bin/aws ]; then
+	path+=/Users/sethcenterbar/Library/Python/3.7/bin/
+fi
+
 if [ -f ~/.tw_zshrc_confidential ]; then # work specific zsh config
 	source ~/.tw_zshrc_confidential
 fi

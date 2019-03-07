@@ -62,5 +62,3 @@ Theme of 2018 was 'conversion and survival'
 - 401k audit coming up
 
 
-# Taking
-- some more notes
