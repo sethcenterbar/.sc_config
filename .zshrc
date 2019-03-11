@@ -68,33 +68,20 @@ alias lo='locate'
 alias hg="history | grep "
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
-alias n="cd ~/notes; ll"
-alias ncmd="grep \\\\$ "
-alias ndir="grep /  "
-alias npeek="grep '##' "
 alias x="exit"
 alias sz="source ~/.zshrc"
 alias grep='grep -i --color'
 alias al="cat ~/.zshrc | grep -v '#' | grep alias"
 alias alg="cat ~/.zshrc | grep -v '#' | grep alias | grep "
 alias tree='tree -C'
-alias ß´†˙='echo "this shit works lol"'
 alias ml='mongolog'
-alias ss="./box_jumper.sh"
 alias gah="sudo !!"
 alias sudo='sudo env PATH=$PATH'
 alias hg='history | grep'
 alias svim='sudo vim -u ~/.vimrc'
 alias sc='systemctl'
 alias ssc='sudo systemctl'
+alias sscs='sudo systemctl status'
+alias sscr='sudo systemctl restart'
 alias rhelpy='scl enable rh-python36 $(which zsh)'
-alias ec2='ssh -i "~/.ssh/EssentialsKP.pem" ec2-user@ec2-34-206-3-50.compute-1.amazonaws.com'
-alias rhyme="python3 ~/scripts/rhyme.py"
 alias vg="vim -c 'Goyo' "
-alias lyn="learnyounode"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/sethcenterbar/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sethcenterbar/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/sethcenterbar/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sethcenterbar/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
