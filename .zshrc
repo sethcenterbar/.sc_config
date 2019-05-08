@@ -5,6 +5,7 @@ cd ~
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 export ZSHRC_PYTHON_PATH=$(which python3)
+export EDITOR='vim'
 
 # Auto update zsh
 DISABLE_UPDATE_PROMPT=true
@@ -22,6 +23,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bin/tmuxinator.zsh
 
 # Custom Functions
 function mongolog() {
@@ -85,3 +87,6 @@ alias sscs='sudo systemctl status'
 alias sscr='sudo systemctl restart'
 alias rhelpy='scl enable rh-python36 $(which zsh)'
 alias vg="vim -c 'Goyo' "
+alias dirs="dirs -v"
+alias yt="mpsyt"
+alias cleanconf='egrep -v "^\s*(#|$)"'

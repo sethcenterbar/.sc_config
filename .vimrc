@@ -12,9 +12,14 @@ Plug 'hhsnopek/vim-firewatch'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'lepture/vim-jinja'
+Plug 'kezhenxu94/vim-mysql-plugin'
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 colorscheme firewatch
+
+" format sql on save
+autocmd BufWritePost *.sql :Autoformat
 
 " airline 
 let g:lightline = {
