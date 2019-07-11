@@ -90,3 +90,4 @@ alias vg="vim -c 'Goyo' "
 alias dirs="dirs -v"
 alias yt="mpsyt"
 alias cleanconf='egrep -v "^\s*(#|$)"'
+alias emacs='/usr/local/Cellar/emacs/26.2/bin/emacs'
