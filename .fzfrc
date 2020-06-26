@@ -24,3 +24,8 @@ fzh() {
 fp() {
 	dir=$(ls -d ~/dev/*/* | fzf) && cd "$dir"
 }
+
+ft() {
+	session=$(tmux ls | fzf --height=8 +s -e --tac | cut -d ':' -f 1) && tmux attach-session -t "$session"
+
+}

@@ -33,7 +33,11 @@ alias grep='grep -i --color'
 alias vim='nvim'
 alias nvimrc='vim ~/.config/nvim/init.vim'
 
+# Key bindings
+bindkey -r "^O" # Unbind ctrl-o, which i'm going to use in tmux
+# If I wanted to bind a key, it would look like bindkey "^O" some-zsh-command
+
+
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-
