@@ -20,6 +20,7 @@ fzh() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --height=20 +s -e --tac | sed 's/ *[0-9]* *//')
 }
 
-fzp() {
+# fuzzy projects - takes you to project directory
+fp() {
 	dir=$(ls -d ~/dev/*/* | fzf) && cd "$dir"
 }
